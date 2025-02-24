@@ -44,6 +44,7 @@ See: [Device Tree Basics: 2.2.4.2. Property Values](https://devicetree-specifica
 - Values are stored in *big-endian* format
 - **\<u64>** values span two cells
     - `fdt64_to_cpu(x)` function in `libfdt.h` will read a 64 bit value in *bit-endian* and return it as a 64-bit integer in the cpu's endieness.
+    
     > [!CAUTION]
     > #### Using `printf`
     > Do not use printf to read a value of a different endiness. Since the bit order is reversed the formatter will give you the wrong character representation of that nibble. 
